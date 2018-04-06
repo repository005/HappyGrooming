@@ -1,0 +1,150 @@
+.promo {
+	position: relative;
+	height: calc(~"100vh - 90px");
+	min-height: 600px;
+	background: linear-gradient(to right, transparent 40%, #fff);
+
+	@media screen and @tablet {
+		background: none;
+	}
+
+	&_box {
+		position: absolute;
+		width: 600px;
+		right: 0vw;
+		top: 0vh;
+		padding: 75px 100px 0;
+		box-sizing: border-box;
+		z-index: 5;
+
+		@media screen and @tablet {
+			width: auto;
+			max-width: 700px;
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			right: 0;
+			margin: auto;
+			padding: 50px 50px 0;
+			text-align: center;
+		}
+
+		@media screen and @mobile {
+			width: auto;
+			left: 0;
+			right: 0;
+			margin: auto;
+			text-align: center;
+			padding: 40px 40px 0;
+		}
+	}
+
+	&_header {
+		font-size: 48px;
+		margin-bottom: 35px;	
+		color: lighten(@primary-text, 10%);
+		
+		@media screen and @tablet {
+			color: @primary-text;
+		}
+
+		@media screen and @mobile {
+			font-size: 40px;
+		}
+	}
+
+	&_text {
+		margin-bottom: 35px;
+		color: lighten(@primary-text, 15%);
+
+		@media screen and @tablet {
+			color: @primary-text;
+		}
+
+		@media screen and @mobile {
+			font-size: 16px;
+		}
+	}
+
+	&_list {
+		margin-bottom: 55px;
+		color: lighten(@primary-text, 10%);
+	}
+
+	&_item {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 18px;
+		padding-left: 30px;
+
+	  &::after {
+	  	position: absolute;
+	  	top: -2px;
+	  	left: 0;
+	  	color: @light-primary;
+	  	text-align: center;
+	  	line-height: 27px;
+	  	content: '';
+	  	display: block;
+	  	width: 25px;
+	  	height: 25px;
+	  	border-radius: 50%;
+	  	background-color: @dark-primary;
+	  	background-image: url("../../img/check.png");
+	  	background-repeat: no-repeat;
+	  	background-size: 15px;
+	  	background-position: center;
+	  }
+
+	  @media screen and @tablet {
+			color: @primary-text;
+		}
+
+		@media screen and @mobile {
+			display: inline-block;
+		}
+	}
+	
+	&_message {
+		.connect-us;
+	}
+
+	&_back {
+		top: 90px;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: url("../../img/russel.jpg") no-repeat;
+		background-size: cover;
+		z-index: -1;
+
+		@media screen and @tablet {
+			top: 0px;
+			height: calc(~"100vh");
+			background-image: url("../../img/russel_tablet.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			&::after {
+				position: absolute;
+				top: 0;
+				display: block;
+				width: 100%;
+				content: '';
+				background: rgba(255,255,255, .6);
+				height: calc(~"100vh");
+				z-index: 0;
+			}
+		}
+
+		@media screen and @mobile {
+			top: 0;
+			height: calc(~"100vh");
+			background-image: url("../../img/russel_mobile.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+.connect {
+	display: none;
+	position: fixed;
+	top: calc(~"50% - 200px");
+	left: calc(~"50% - 200px");
+	width: 400px;
+	background: linear-gradient(@primary 30%, #fff 30%);
+	border-radius: 5px;
+	padding: 50px 40px 100px;
+	box-shadow: 5px 5px 35px 5px rgba(0, 0, 0, 1);
+	box-sizing: border-box;
+	z-index: 11;
+
+	@media screen and @mobile {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto auto;
+		width: calc(~"100% - 40px");
+		height: 350px;
+	}
+
+	&_headline {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 40px;
+		text-align: center;
+		color: lighten(@primary-text, 5%);
+	}
+
+	&_close {
+		position: absolute;
+		top: -10px; 
+		right: -30px;
+		font-size: 40px;
+		font-style: normal;
+		color: rgba(255,255,255, .5);
+		cursor: pointer;
+		z-index: 0;
+
+		&:hover {
+			color: rgba(255,255,255, .8);
+		}
+
+		@media screen and @tablet {
+			position: absolute;
+			top: -20px; 
+			right: -15px;
+			background: @accent;
+			border-radius: 50%;
+			border: 5px solid @dark-primary;
+			box-sizing: border-box;
+			width: 40px;
+			height: 40px;
+			font-size: 30px;
+			text-align: center;
+			line-height: 27px;
+		}
+	}
+	
+	&_text {
+		margin-bottom: 15px;
+		color: lighten(@primary-text, 15%);
+	}
+
+	&_phone {
+		font-size: 18px;
+		padding-left: 35px;
+		background: url("../../img/phone-dark.svg") no-repeat;
+		margin-bottom: 10px;
+		background-size: contain;
+		color: lighten(@primary-text, 10%);
+	}
+
+	&_vk {
+		font-size: 18px;
+		padding-left: 35px;
+		background: url("../../img/vk-dark.svg") no-repeat;
+		background-size: contain;
+		color: darken(@dark-primary, 10%);
+		text-decoration: underline;
+
+		&:hover {
+			color: darken(@dark-primary, 20%);
+		}
+	}
+}

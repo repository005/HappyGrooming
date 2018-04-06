@@ -1,0 +1,52 @@
+.about {
+	background-color: @light-primary;
+	background-image: url("../../img/background-texture.png");
+	
+	&_container {
+		.container;
+		display: flex;
+		justify-content: space-between;
+		align-content: top;
+		flex-wrap: wrap;
+		padding-top: 70px;
+		padding-bottom: 80px;
+
+		@media screen and @tablet {
+			justify-content: center;
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+
+	&_header {
+		width: 100%;
+		margin-bottom: 50px;
+		text-align: center;
+		font-size: 48px;
+		color: lighten(@primary-text, 10%);
+
+		@media screen and @mobile {
+			margin-bottom: 40px;
+			font-size: 38px;
+		}
+	}
+
+	&_block {
+		max-width: 33%;
+		min-width: 300px;
+		text-align: center;
+	}
+
+	&_icon {
+		margin-bottom: 25px;
+	}
+
+	&_block-header {
+		margin-bottom: 25px;
+		color: lighten(@primary-text, 15%);
+	}
+
+	&_text {
+		color: lighten(@primary-text, 20%);
+	}
+}

@@ -1,0 +1,67 @@
+.price {
+	padding: 50px 0 50px;
+	background: #fff;
+	box-sizing: border-box;
+
+	@media screen and @mobile { 
+		padding: 40px 0 40px;
+	}	
+
+	&_table {
+		.container;
+		width: 100%;
+		text-align: center;
+		border-collapse: collapse;
+		font-size: 20px;
+	}
+
+	&_caption {
+		font-size: 48px;
+		margin-bottom: 50px;
+		box-sizing: border-box;
+		font-weight: bold;
+		color: lighten(@primary-text, 10%);
+
+		@media screen and @mobile {
+			font-size: 38px;
+			margin-bottom: 40px;
+		}
+	}
+
+	&_row {
+		color: @primary-text;
+		background: darken(@light-primary, 15%);
+
+		&:nth-child(2n) {
+			background: #fff;
+			color: #000;
+		}
+
+		&:hover {
+			background: darken(@accent, -20%);
+			transition: .3s background ease-in;
+			color: @primary-text;
+			user-select: none;
+		}
+	}
+
+	&_header {
+		padding: 25px 0;
+		background: darken(@dark-primary, 10%);
+		color: #fff;
+		font-size: 24px;
+
+		@media screen and @mobile {
+			font-size: 20px;
+		}
+	}
+
+	&_cell {
+		padding: 20px 0;
+		box-sizing: border-box;
+
+		@media screen and @mobile {
+			font-size: 18px;
+		}
+	}
+}

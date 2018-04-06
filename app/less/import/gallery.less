@@ -1,0 +1,48 @@
+.gallery {
+	padding-top: 50px;
+	background-image: url("../../img/background-texture.png");
+	background-color: @light-primary;
+
+	@media screen and @mobile {
+		padding-top: 40px;
+	}
+
+	&_headline {
+		text-align: center;
+		font-size: 48px;
+		margin-bottom: 50px;
+		color: lighten(@primary-text, 10%);
+
+		@media screen and @mobile {
+			font-size: 38px;
+			margin-bottom: 40px;
+		}
+	}
+
+	&_container {
+		.container;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	&_item {
+		margin-right: 15px;
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&_photo {
+		width: 200px;
+
+		@media screen and @tablet {
+			width: 150px;
+		}
+		@media screen and @mobile {
+			width: 90px;
+		}
+	}
+}

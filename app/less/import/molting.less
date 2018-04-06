@@ -1,0 +1,77 @@
+.molting {
+	display: none;
+	position: fixed;
+	top: calc(~"50% - 30%");
+	left: calc(~"50% - 300px");
+	max-width: 600px;
+	background-color: @light-primary;
+	background-image: url("../../img/background-texture.png");
+	padding: 50px;
+	box-sizing: border-box;
+	z-index: 11;
+	box-shadow: 5px 5px 35px 5px rgba(0, 0, 0, 1);
+
+	@media screen and @tablet {
+		position: fixed;
+		width: 90%;
+		padding-bottom: 25px;
+		top: 30px;
+		bottom: 30px;
+		right: 0;
+		left: 0;
+		margin: auto;
+		overflow: scroll;
+	}
+
+	&_headline {
+		margin-bottom: 20px;
+		color: lighten(@primary-text, 10%);
+	}
+
+	&_text {
+		margin-bottom: 10px;
+		color: lighten(@primary-text, 20%);
+
+		&__italic {
+			font-style: italic;
+		}
+	}
+
+	&_close {
+		position: absolute;
+		top: -10px; 
+		right: -30px;
+		font-size: 40px;
+		font-style: normal;
+		color: rgba(255,255,255, .5);
+		cursor: pointer;
+		z-index: 6;
+
+		&:hover {
+			color: rgba(255,255,255, .8);
+		}
+
+		@media screen and @tablet {
+			position: absolute;
+			top: 5px; 
+			right: 5px;
+			box-sizing: border-box;
+			width: 40px;
+			height: 40px;
+			font-size: 40px;
+			text-align: center;
+			line-height: 40px;
+			color: rgba(0, 0, 0, .5);
+
+			&:hover {
+				color: rgba(0, 0, 0, .7);
+			}
+		}
+
+		@media screen and @mobile {
+			position: fixed;
+			top: 35px; 
+			right: 25px;
+		}
+	}
+}
